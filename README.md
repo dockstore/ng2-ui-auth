@@ -1,3 +1,9 @@
+Forked from ronzeidman/ng2-ui-auth, which has not been updated for newer versions of Angular. We will
+
+If you make changes to this repo, you need to build it, `npm ci && npm run build`; this can change the contents of the `dist` directory, which need to be committed. Ideally that would be automated, but doing it manually for now to unblock the Dockstore migration to Angular 16.
+
+
+### Original Content follows
 An angular2 repository for authentication based on angular1's satellizer (https://satellizer.herokuapp.com/#/ https://github.com/sahat/satellizer) library. To use this run npm install ng2-ui-auth --save.
 
 If you are migrating from version 7 or below, look at the changelog
