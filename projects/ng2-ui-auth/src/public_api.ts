@@ -11,7 +11,7 @@ import { AuthService } from './lib/auth.service';
 import { ConfigService, CONFIG_OPTIONS } from './lib/config.service';
 import { JwtInterceptor } from './lib/interceptor.service';
 import { IProviders } from './lib/config-interfaces';
-import { IPartialConfigOptions} from './lib/config-interfaces';
+import { IPartialConfigOptions, IOauth2Options } from './lib/config-interfaces';
 import { StorageType } from './lib/storage-type.enum';
 
 /*
@@ -30,6 +30,7 @@ export {
   AuthService,
   ConfigService,
   IPartialConfigOptions,
+  IOauth2Options,
   JwtInterceptor,
   CONFIG_OPTIONS,
   IProviders,
