@@ -2,7 +2,7 @@ import * as i0 from '@angular/core';
 import { InjectionToken, Injectable, Inject, Injector, NgModule } from '@angular/core';
 import * as i1 from '@angular/common/http';
 import { HttpClient, HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { Observable, of, empty, merge, fromEvent, interval, throwError } from 'rxjs';
+import { Observable, of, empty, merge, fromEvent, throwError, interval } from 'rxjs';
 import { delay, map, switchMap, take, tap } from 'rxjs/operators';
 
 /**
@@ -541,7 +541,7 @@ class PopupService {
             throw new Error('Authentication Canceled');
         })), fromEvent(popupWindow, 'loadstart')).pipe(switchMap((event) => {
             if (!popupWindow || popupWindow.closed) {
-                return Observable.throw(new Error('Authentication Canceled'));
+                return throwError(() => new Error('Authentication Canceled'));
             }
             if (event.url.indexOf(redirectUri) !== 0) {
                 return empty();
@@ -671,7 +671,7 @@ class Oauth2Service {
             if (oauthOptions.responseType === 'token' || !oauthOptions.url) {
                 return of(oauthData);
             }
-            if (oauthData.state && oauthData.state !== authorizationData.state) {
+            if (oauthData.state && oauthData.state !== authorizationData['state']) {
                 throw new Error('OAuth "state" mismatch');
             }
             return this.exchangeForToken(oauthOptions, authorizationData, oauthData, userData);

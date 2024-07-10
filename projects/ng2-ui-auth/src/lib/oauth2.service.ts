@@ -28,7 +28,7 @@ export class Oauth2Service implements IOauthService {
           return of(oauthData);
         }
 
-        if (oauthData.state && oauthData.state !== authorizationData.state) {
+        if (oauthData.state && oauthData.state !== authorizationData['state']) {
           throw new Error('OAuth "state" mismatch');
         }
         return this.exchangeForToken<T>(oauthOptions, authorizationData, oauthData, userData);

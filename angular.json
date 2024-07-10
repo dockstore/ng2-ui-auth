@@ -10,33 +10,32 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/ng2-ui-auth/tsconfig.lib.json",
             "project": "projects/ng2-ui-auth/ng-package.json"
           },
           "configurations": {
             "production": {
-              "project": "projects/ng2-ui-auth/ng-package.prod.json"
+              "tsConfig": "projects/ng2-ui-auth/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng2-ui-auth/tsconfig.lib.json"
             }
-          }
+          },
+          "defaultConfiguration": "production"
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng2-ui-auth/src/test.ts",
             "tsConfig": "projects/ng2-ui-auth/tsconfig.spec.json",
-            "karmaConfig": "projects/ng2-ui-auth/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["projects/ng2-ui-auth/tsconfig.lib.json", "projects/ng2-ui-auth/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**"]
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
           }
         }
       }
+
     }
   },
   "defaultProject": "Ng2UiAuth"

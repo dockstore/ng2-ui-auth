@@ -19,7 +19,7 @@ export declare class OauthService {
         provide: typeof ConfigService;
         useValue: ConfigService;
     })[];
-    readonly deps: (typeof ConfigService | typeof PopupService | typeof HttpClient)[];
+    readonly deps: (typeof HttpClient | typeof ConfigService | typeof PopupService)[];
     constructor(http: HttpClient, shared: SharedService, config: ConfigService, popup: PopupService);
     authenticate<T extends object | string>(name: string, userData?: any): Observable<T>;
     unlink<T>(provider: string, url?: string, method?: string): Observable<T>;

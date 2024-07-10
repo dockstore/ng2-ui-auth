@@ -4,7 +4,7 @@ import { HttpHeaders, HttpParams } from '@angular/common/http';
  * Created by Ron on 17/12/2015.
  */
 
-export function joinUrl(baseUrl: string, url: string) {
+export function joinUrl(baseUrl: string, url: string | undefined) {
   if (/^(?:[a-z]+:)?\/\//i.test(url)) {
     return url;
   }
@@ -18,7 +18,7 @@ export function joinUrl(baseUrl: string, url: string) {
     .replace(/\:\//g, '://');
 }
 
-export function buildQueryString(obj: object) {
+export function buildQueryString(obj: {[key: string]: any } ) {
   return Object.keys(obj)
     .map(key => (!!obj[key] ? `${encodeURIComponent(key)}=${encodeURIComponent(obj[key])}` : key))
     .join('&');
