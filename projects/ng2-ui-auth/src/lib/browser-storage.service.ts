@@ -3,7 +3,7 @@ import { StorageService } from './storage-service';
 import { StorageType } from './storage-type.enum';
 import { ConfigService } from './config.service';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class BrowserStorageService extends StorageService {
   private store: { [key: string]: string } = {};
   private storageType = StorageType.MEMORY;

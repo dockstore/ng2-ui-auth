@@ -8,7 +8,7 @@ import { IOauthService } from './oauth-service';
 import { PopupService } from './popup.service';
 import { buildQueryString, joinUrl } from './utils';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class Oauth1Service implements IOauthService {
   constructor(private http: HttpClient, private popup: PopupService, private config: ConfigService) {}
 

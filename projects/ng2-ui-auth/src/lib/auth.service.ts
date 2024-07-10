@@ -5,7 +5,7 @@ import { OauthService } from './oauth.service';
 import { SharedService } from './shared.service';
 import { StorageType } from './storage-type.enum';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class AuthService {
   constructor(private shared: SharedService, private local: LocalService, private oauth: OauthService) {}
 

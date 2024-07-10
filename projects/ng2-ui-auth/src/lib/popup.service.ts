@@ -5,7 +5,7 @@ import { IOauth1Options, IOauth2Options, IPopupOptions } from './config-interfac
 import { getWindowOrigin } from './utils';
 
 declare const cordova: any;
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class PopupService {
   public open(url: string, options: IOauth2Options | IOauth1Options, cordova = this.isCordovaApp()) {
     const stringifiedOptions = this.stringifyOptions(this.prepareOptions(options.popupOptions));

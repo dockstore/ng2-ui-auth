@@ -240,9 +240,10 @@ class ConfigService {
     }
 }
 ConfigService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: ConfigService, deps: [{ token: CONFIG_OPTIONS }], target: i0.ɵɵFactoryTarget.Injectable });
-ConfigService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: ConfigService });
+ConfigService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: ConfigService, providedIn: 'root' });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: ConfigService, decorators: [{
-            type: Injectable
+            type: Injectable,
+            args: [{ providedIn: 'root' }]
         }], ctorParameters: function () {
         return [{ type: undefined, decorators: [{
                         type: Inject,
@@ -382,9 +383,10 @@ class BrowserStorageService extends StorageService {
     }
 }
 BrowserStorageService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: BrowserStorageService, deps: [{ token: ConfigService }], target: i0.ɵɵFactoryTarget.Injectable });
-BrowserStorageService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: BrowserStorageService });
+BrowserStorageService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: BrowserStorageService, providedIn: 'root' });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: BrowserStorageService, decorators: [{
-            type: Injectable
+            type: Injectable,
+            args: [{ providedIn: 'root' }]
         }], ctorParameters: function () { return [{ type: ConfigService }]; } });
 
 class SharedService {
@@ -489,9 +491,10 @@ class SharedService {
     }
 }
 SharedService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: SharedService, deps: [{ token: StorageService }, { token: ConfigService }], target: i0.ɵɵFactoryTarget.Injectable });
-SharedService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: SharedService });
+SharedService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: SharedService, providedIn: 'root' });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: SharedService, decorators: [{
-            type: Injectable
+            type: Injectable,
+            args: [{ providedIn: 'root' }]
         }], ctorParameters: function () { return [{ type: StorageService }, { type: ConfigService }]; } });
 
 class JwtInterceptor {
@@ -508,9 +511,10 @@ class JwtInterceptor {
     }
 }
 JwtInterceptor.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: JwtInterceptor, deps: [{ token: SharedService }, { token: ConfigService }], target: i0.ɵɵFactoryTarget.Injectable });
-JwtInterceptor.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: JwtInterceptor });
+JwtInterceptor.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: JwtInterceptor, providedIn: 'root' });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: JwtInterceptor, decorators: [{
-            type: Injectable
+            type: Injectable,
+            args: [{ providedIn: 'root' }]
         }], ctorParameters: function () { return [{ type: SharedService }, { type: ConfigService }]; } });
 
 class PopupService {
@@ -615,9 +619,10 @@ class PopupService {
     }
 }
 PopupService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: PopupService, deps: [], target: i0.ɵɵFactoryTarget.Injectable });
-PopupService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: PopupService });
+PopupService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: PopupService, providedIn: 'root' });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: PopupService, decorators: [{
-            type: Injectable
+            type: Injectable,
+            args: [{ providedIn: 'root' }]
         }] });
 
 class Oauth1Service {
@@ -643,9 +648,10 @@ class Oauth1Service {
     }
 }
 Oauth1Service.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: Oauth1Service, deps: [{ token: i1.HttpClient }, { token: PopupService }, { token: ConfigService }], target: i0.ɵɵFactoryTarget.Injectable });
-Oauth1Service.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: Oauth1Service });
+Oauth1Service.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: Oauth1Service, providedIn: 'root' });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: Oauth1Service, decorators: [{
-            type: Injectable
+            type: Injectable,
+            args: [{ providedIn: 'root' }]
         }], ctorParameters: function () { return [{ type: i1.HttpClient }, { type: PopupService }, { type: ConfigService }]; } });
 
 class Oauth2Service {
@@ -708,9 +714,10 @@ class Oauth2Service {
     }
 }
 Oauth2Service.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: Oauth2Service, deps: [{ token: i1.HttpClient }, { token: PopupService }, { token: ConfigService }], target: i0.ɵɵFactoryTarget.Injectable });
-Oauth2Service.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: Oauth2Service });
+Oauth2Service.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: Oauth2Service, providedIn: 'root' });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: Oauth2Service, decorators: [{
-            type: Injectable
+            type: Injectable,
+            args: [{ providedIn: 'root' }]
         }], ctorParameters: function () { return [{ type: i1.HttpClient }, { type: PopupService }, { type: ConfigService }]; } });
 
 class OauthService {
@@ -744,9 +751,10 @@ class OauthService {
     }
 }
 OauthService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: OauthService, deps: [{ token: i1.HttpClient }, { token: SharedService }, { token: ConfigService }, { token: PopupService }], target: i0.ɵɵFactoryTarget.Injectable });
-OauthService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: OauthService });
+OauthService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: OauthService, providedIn: 'root' });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: OauthService, decorators: [{
-            type: Injectable
+            type: Injectable,
+            args: [{ providedIn: 'root' }]
         }], ctorParameters: function () { return [{ type: i1.HttpClient }, { type: SharedService }, { type: ConfigService }, { type: PopupService }]; } });
 
 class LocalService {
@@ -765,9 +773,10 @@ class LocalService {
     }
 }
 LocalService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: LocalService, deps: [{ token: i1.HttpClient }, { token: SharedService }, { token: ConfigService }], target: i0.ɵɵFactoryTarget.Injectable });
-LocalService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: LocalService });
+LocalService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: LocalService, providedIn: 'root' });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: LocalService, decorators: [{
-            type: Injectable
+            type: Injectable,
+            args: [{ providedIn: 'root' }]
         }], ctorParameters: function () { return [{ type: i1.HttpClient }, { type: SharedService }, { type: ConfigService }]; } });
 
 class AuthService {
@@ -817,9 +826,10 @@ class AuthService {
     }
 }
 AuthService.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: AuthService, deps: [{ token: SharedService }, { token: LocalService }, { token: OauthService }], target: i0.ɵɵFactoryTarget.Injectable });
-AuthService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: AuthService });
+AuthService.ɵprov = i0.ɵɵngDeclareInjectable({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: AuthService, providedIn: 'root' });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "15.2.10", ngImport: i0, type: AuthService, decorators: [{
-            type: Injectable
+            type: Injectable,
+            args: [{ providedIn: 'root' }]
         }], ctorParameters: function () { return [{ type: SharedService }, { type: LocalService }, { type: OauthService }]; } });
 
 class Ng2UiAuthModule {

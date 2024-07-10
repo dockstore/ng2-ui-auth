@@ -6,7 +6,7 @@ import { joinUrl } from './utils';
 import { tap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class LocalService {
   constructor(private http: HttpClient, private shared: SharedService, private config: ConfigService) {}
 

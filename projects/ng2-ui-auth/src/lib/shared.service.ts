@@ -4,7 +4,7 @@ import { Subscriber, Observable } from 'rxjs';
 import { StorageService } from './storage-service';
 import { ConfigService } from './config.service';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class SharedService {
   public tokenName = this.config.options.tokenPrefix
     ? [this.config.options.tokenPrefix, this.config.options.tokenName].join(this.config.options.tokenSeparator)

@@ -4,7 +4,7 @@ import { SharedService } from './shared.service';
 import { ConfigService } from './config.service';
 import { Observable } from 'rxjs';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class JwtInterceptor implements HttpInterceptor {
   constructor(private shared: SharedService, private config: ConfigService) {}
 

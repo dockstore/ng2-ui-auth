@@ -4,7 +4,7 @@ import { defaultProviders } from './config-providers';
 import { StorageType } from './storage-type.enum';
 
 export const CONFIG_OPTIONS = new InjectionToken<any>('config.options');
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class ConfigService {
   public options = {
     withCredentials: false,

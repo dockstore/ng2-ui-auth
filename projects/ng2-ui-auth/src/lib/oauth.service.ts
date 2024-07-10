@@ -10,7 +10,7 @@ import { SharedService } from './shared.service';
 import { HttpClient } from '@angular/common/http';
 import { IOauthService } from './oauth-service';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class OauthService {
   readonly depProviders = [
     { provide: HttpClient, useValue: this.http },
